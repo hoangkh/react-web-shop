@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 
-import Header from "./pages/Header";
-import Body from "./pages/Body";
-import Footer from "./pages/Footer";
+import Header from "./templates/Header";
+import Body from "./templates/Body";
+import Footer from "./templates/Footer";
 
 function App() {
   return (   
