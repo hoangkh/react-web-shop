@@ -1,0 +1,90 @@
+<Router>
+    <Navbar id="main-nav" bg="light" expand="lg">
+      <Link to="/" className="brand-name">React Playground</Link>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Link className="menu-items" to="/about">About</Link>
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="outline-success">Search</Button>
+        </Form>
+      </Navbar.Collapse>
+    </Navbar>
+
+    <Switch>
+      <Route path="/about">
+        <About />
+      </Route>
+     
+      <Route path="/under-construction">
+        <UnderConstructionPage />
+      </Route>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="*">
+        <NotFoundPage />
+      </Route>
+    </Switch>
+</Router>
+
+
+
+<Navbar expand="lg">
+        <Link to="/shop" className="brand-name">My Shop</Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            {menuItem.map((item, index) => (
+                <Link className="menu-items" to="/under-construction">{item}</Link>    
+              ))}
+          </Nav>
+          <Form inline>
+              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+        </Navbar.Collapse>
+      </Navbar>
+
+
+        <div className="grid-container">
+      <div className="item1">Header</div>
+      <div className="item2">Menu</div>
+      <div className="item3">Main</div>  
+      <div className="item4">Right</div>
+      <div className="item5">Footer</div>
+    </div>
+
+
+    return <div id="home-page">
+    <div className="grid-container">
+        {projectsName.map((project, index) => ( 
+        <div key={index} className="project-name grid-item">{project}</div>        
+        ))}                           
+  </div>
+  </div>;
+}
+
+
+
+
+import React from 'react';
+
+
+import Header from "./Header";
+import Body from "./Body";
+import Footer from "./Footer";
+
+function Home() {
+    const projectsName= ['Shop', 'Media', 'Calculator', 'Social Media', 'API', 'Blog']
+    return <div id="home-page">
+    This is home page
+        <Header />
+        <Body />
+        <Footer />
+  </div>;
+}
+  
+export default Home;
