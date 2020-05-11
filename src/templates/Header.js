@@ -9,7 +9,7 @@ import {
 
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
-import Home from "./HomePage";
+import Home from ".././App";
 import About from "./AboutPage";
 import NotFoundPage from "./NotFoundPage";
 import UnderConstructionPage from "./UnderConstructionPage";
